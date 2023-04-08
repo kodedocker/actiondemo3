@@ -1,0 +1,14 @@
+name: First PR
+
+on: [pull_request_target]
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    
+    steps: 
+      - name: Step1
+        uses: actions/first-interaction@v1.1.1
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          pr-mesage: Welcome onboard!
